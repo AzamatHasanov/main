@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş və Qeydiyyat Forması</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <div class="form-header">
+                <ul class="tab-list">
+                    <li class="tab-item active" data-target="login">Giriş</li>
+                    <li class="tab-item" data-target="register">Qeydiyyat</li>
+                </ul>
+            </div>
+            <div class="form-content">
+                <div id="login" class="form-section active">
+                    <h2>Giriş</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-username">İstifadəçi Adı</label>
+                            <input type="text" id="login-username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Şifrə</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit">Giriş</button>
+                    </form>
+                </div>
+                <div id="register" class="form-section">
+                    <h2>Qeydiyyat</h2>
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-username">İstifadəçi Adı</label>
+                            <input type="text" id="register-username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">E-poçt</label>
+                            <input type="email" id="register-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Şifrə</label>
+                            <input type="password" id="register-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm-password">Şifrəni Təsdiqlə</label>
+                            <input type="password" id="register-confirm-password" required>
+                        </div>
+                        <button type="submit">Qeydiyyat</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

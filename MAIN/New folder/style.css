@@ -1,0 +1,436 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+    /* Açıq boz */
+    color: #333333;
+    /* Qaranlıq boz */
+}
+
+header {
+    background-color: #81C784;
+    /* Açıq yaşıl */
+    color: #ffffff;
+    /* Ağ */
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffffff;
+    /* Ağ */
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #81C784;
+    /* Açıq yaşıl */
+    background-color: #ffffff;
+    /* Ağ */
+    border-radius: 5px;
+}
+
+#introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: #333333;
+    /* Qaranlıq boz */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #A5D6A7, #81C784);
+    /* Açıq yaşıl tonları */
+}
+
+#intro-text {
+    max-width: 50%;
+    text-align: center;
+}
+
+#intro-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#contact-btn {
+    background-color: #ffffff;
+    /* Ağ */
+    color: #81C784;
+    /* Açıq yaşıl */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact-btn:hover {
+    background-color: #81C784;
+    /* Açıq yaşıl */
+    color: #ffffff;
+    /* Ağ */
+}
+
+#animation {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+#about {
+    padding: 60px 20px;
+    background-color: #E8F5E9;
+    /* Açıq yaşıl */
+    position: relative;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #81C784;
+    margin: 10px 0;
+}
+
+#my-skills {
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #F1F8E9;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.skill {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333333;
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill:hover {
+    background-color: #f5f5f5;
+    /* Açıq boz */
+    transform: scale(1.05);
+}
+
+.skill i {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #81C784;
+    /* Açıq yaşıl */
+    transition: color 0.3s ease;
+}
+
+.skill:hover i {
+    color: #333333;
+}
+
+#my-skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(-30deg);
+    z-index: 0;
+}
+
+#portfolio {
+    padding: 60px 20px;
+    background-color: #F0F0F0;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px;
+    flex: 1 1 calc(25% - 20px);
+    /* 4 sütun */
+}
+
+.portfolio-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+    background-color: #81C784;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background-color: #66bb6a;
+}
+
+#scroll-to-top i {
+    font-size: 1.5rem;
+}
+
+#portfolio {
+    padding: 60px 20px;
+    background-color: #F0F0F0;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-container {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    height: 250px;
+}
+
+.portfolio-container {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    transition: transform 10s linear;
+}
+
+.portfolio-item {
+    display: inline-block;
+    width: 250px;
+    height: 100%;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Media Queries for responsive design */
+
+@media only screen and (max-width: 768px) {
+    .scroll-container {
+        height: 150px;
+    }
+    .portfolio-item {
+        width: 150px;
+    }
+}
+
+
+/* Media Queries for responsive design */
+
+
+/* Media Queries for responsive design */
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #81C784;
+        /* Açıq yaşıl */
+        z-index: 1000;
+    }
+    nav {
+        /* flex-direction: column; */
+        align-items: center;
+        /* Mərkəzləşdirilmiş */
+    }
+    nav a {
+        margin: 5px 0;
+    }
+    #intro-text h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .skill-container {
+        flex-direction: column;
+    }
+    .portfolio-item {
+        height: 150px;
+        flex: 1 1 100%;
+    }
+    #scroll-to-top {
+        bottom: 10px;
+        right: 10px;
+        font-size: 1.2rem;
+    }
+    nav {
+        display: flex;
+        /* justify-content: center; */
+    }
+}
+
+
+/* Ümumi Stil */
+
+
+/* Scroll Container */
+
+.scroll-container {
+    overflow-x: auto;
+    padding: 20px 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Portfolio Container */
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+
+/* Portfolio Item */
+
+.portfolio-item {
+    background: #fff;
+    /* Ağ arxa fon */
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    /* Açıq boz sərhəd */
+    padding: 20px;
+    min-width: 300px;
+    /* Minimum genişlik 300px */
+    flex: 0 0 auto;
+    /* Elementlərin bir xəttdə qalmasını təmin edir */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Mərkəzləşdirilmiş hizalanma */
+    width: 100%;
+    height: 100%;
+    /* Tam hündürlük */
+}
+
+.portfolio-item i {
+    font-size: 50px;
+    color: #4caf50;
+    /* Yaşıl ikon rəngi */
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    /* Yazı qalın */
+    color: #333;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover p {
+    color: #4caf50;
+}
+
+
+/* Mobil Ekran Dəstəyi */
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        align-items: center;
+    }
+    .portfolio-item {
+        min-width: 40%;
+        margin-bottom: 20px;
+    }
+}

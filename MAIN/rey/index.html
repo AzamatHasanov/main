@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şəxsi Finans İzləyici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Şəxsi Finans İzləyici</h1>
+        </header>
+        <main>
+            <section class="entry-form">
+                <h2>Gəlir və Xərc Əlavə Et</h2>
+                <input type="text" id="description" placeholder="Təsvir" />
+                <input type="number" id="amount" placeholder="Məbləğ" />
+                <select id="type">
+                    <option value="income">Gəlir</option>
+                    <option value="expense">Xərc</option>
+                </select>
+                <button id="add-entry">Əlavə Et</button>
+            </section>
+            <section class="summary">
+                <h2>Maliyyə Xülasəsi</h2>
+                <div class="summary-item">
+                    <h3>Ümumi Gəlir:</h3>
+                    <p id="total-income">0 AZN</p>
+                </div>
+                <div class="summary-item">
+                    <h3>Ümumi Xərc:</h3>
+                    <p id="total-expense">0 AZN</p>
+                </div>
+                <div class="summary-item">
+                    <h3>Net Balans:</h3>
+                    <p id="net-balance">0 AZN</p>
+                </div>
+            </section>
+            <section class="entries">
+                <h2>Əlavə Edilmiş Qeydlər</h2>
+                <ul id="entry-list"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
